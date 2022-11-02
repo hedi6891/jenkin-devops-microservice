@@ -51,7 +51,7 @@ pipeline {
 			steps{
 				//docker build -t hedi06/currency-exchange-devops:$env.BUILD_TAG
 				script{
-					dockerImage = docker.build("docker build -t hedi06/currency-exchange-devops:${env.BUILD_TAG}")
+					dockerImage = docker.build("docker build --tag hedi06/currency-exchange-devops:${env.BUILD_TAG}")
 				}
 			}
 		}
